@@ -1,0 +1,10 @@
+site_name: Chao's notes
+theme: 
+  name: material
+nav:
+  - Home: index.md
+  - 语言:
+      - Python: 语言/Python.md
+      - C: 语言/C.md
+      - C++: 语言/C++.md
+  - Misc: misc.md
