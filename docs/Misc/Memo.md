@@ -1,6 +1,7 @@
 ## mkdocs
 
 * 从头教你用`mkdocs`构建个人博客系统: [blog.csdn.net](https://blog.csdn.net/qq_41261251/article/details/116021097).
+* Mkdocs Material使用学习：[Mkdocs Material](https://shafish.cn/blog/mkdocs/)
 * My notes: [local页面](http://127.0.0.1:8000/)，[public项目页面](https://lingyu11.github.io/notes/)，[public个人页面](https://lingyu11.github.io/).
 * 本地文件存放目录为`C:\Users\username\ChaoNotes`，对应于GitHub仓库为：
     - [源文档](https://github.com/lingyu11/notes/tree/master)存放在`master`分支

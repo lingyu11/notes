@@ -5,21 +5,30 @@ nav:
   - 语言:
       - Python: 
         - 语言/Python/PythonCookBook.md
-        - 语言/Python/P.md
       - C: 语言/C/C.md
-      - C++: 语言/Cpp/Cpp.md
-  - ICS: ICS.md
+      - C++: 
+        - 语言/Cpp/Cpp_primer.md
+        - 语言/Cpp/Essential_Cpp.md
+  - ICS: 
+        - ICS/计算机系统基础实验.md
   - OS: OS.md
   - 数据结构: data_structure.md
   - 算法: algo.md
-  - Linux: Linux.md
+  - Linux: 
+      - 基础知识: Linux/Linux.md
+      - Useful cmd: Linux/useful_cmd.md
   - 计算机网络: network.md
   - 数据库: database.md
-  - Misc: misc.md
+  - Tool: Tool/tool.md
+  - Misc: 
+      - Memo: Misc/Memo.md
+      - Todo: Misc/Todo.md
+      - Learning Material: Misc/LearningMaterial.md
+
 
 theme:
   icon:
-    logo: material/notebook
+    logo: material/notebook-outline
   language: zh
   name: material
   features:
@@ -44,6 +53,7 @@ theme:
     # 可以通过按钮复制代码
     # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-copy-button
     - content.code.copy
+    - content.code.annotate
     # [点击按钮跳转至 GitHub 修改 Markdown 源文件]
     # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#code-actions
     # - content.action.edit
@@ -86,6 +96,15 @@ plugins:
   # https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/
   # https://squidfunk.github.io/mkdocs-material/plugins/tags/#meta.tags
   # - tags
+  - statistics
+  - changelog
+  - git-revision-date-localized:
+      type: datetime
+      timezone: Asia/Shanghai
+      locale: zh
+      enable_creation_date: true
+      exclude:
+        - index.md
 markdown_extensions:
   # [数学公式支持]
   # https://squidfunk.github.io/mkdocs-material/reference/math/#katex
@@ -100,6 +119,18 @@ markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#+toc.permalink
   - toc:
       permalink: true # 固定标题位置为当前位置
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.critic
+  - pymdownx.magiclink
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.tasklist:
+      custom_checkbox: true
   # [代码语法高亮]
   # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-blocks
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#highlight
@@ -112,6 +143,7 @@ markdown_extensions:
       line_spans: __span
       # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#+pymdownx.highlight.pygments_lang_class
       pygments_lang_class: true
+      anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
@@ -138,3 +170,4 @@ extra_css:
   - mkdocs/css/no-footer.css
   # 无序列表符号自定义
   - mkdocs/css/unordered-list-symbols.css
+  - css/table.css
