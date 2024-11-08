@@ -11,7 +11,12 @@ nav:
         - 语言/Cpp/Essential_Cpp.md
   - ICS: 
         - ICS/计算机系统基础实验.md
-  - OS: OS.md
+  - OS: 
+        - OS/绪论.md
+        - OS/并发.md
+        - OS/虚拟化.md
+        - OS/持久化.md
+        - OS/总结.md
   - 数据结构: data_structure.md
   - 算法: algo.md
   - Linux: 
@@ -129,6 +134,7 @@ markdown_extensions:
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.tabbed:
       alternate_style: true 
+  - def_list
   - pymdownx.tasklist:
       custom_checkbox: true
   # [代码语法高亮]
@@ -161,6 +167,9 @@ extra_javascript:
   - mkdocs/javascripts/katex.js
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 extra_css:
   # [数学公式支持]
   # https://squidfunk.github.io/mkdocs-material/reference/math/#katex
