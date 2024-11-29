@@ -6,31 +6,25 @@
 📌 第六章：数据编码和处理 https://python3-cookbook.readthedocs.io/zh-cn/latest/chapters/p06_data_encoding_and_process.html
 
 
-## Finished
-✅ 2024-09-22 20:27:03 完成了 [01 About ICS-PA2024](https://www.bilibili.com/video/BV11BpFe4EmM/?spm_id_from=333.788&vd_source=2a33d03ec3e67e46971208a7faa0dcda)
-
 ## OS Todo
 📌 [AbstractMachine: 抽象计算机](https://jyywiki.cn/AbstractMachine/)
 
 📌 详细阅读代码
 
-* Lect1/mini-rv32 
-* Lect4/mosaic
+* ~~Lect1/mini-rv32~~ 
+* ~~Lect4/mosaic~~
 * 理解Lect13/lockdep.cc里的Floyd-Warshall's algorithm
+* 配置好vscode，debug Lect21/thread-os.c (上下文切换)
+* 跟着视频debug Lect23/xv6-riscv (上下文切换)
 
 📌 做lab
 
-* [M1: 打印进程树 (pstree)](https://jyywiki.cn/OS/2024/labs/M1.md)
 * [L0: 为计算机硬件编程](https://jyywiki.cn/OS/2024/labs/L0.md)
-* [M2: 协程库 (libco)](https://jyywiki.cn/OS/2024/labs/M2.md)
 * [L1: 物理内存管理 (pmm)](https://jyywiki.cn/OS/2024/labs/L1.md)
-* [M3: GPT-2 并行推理 (gpt.c)](https://jyywiki.cn/OS/2024/labs/M3.md)
-* [M4: C Read-Eval-Print-Loop (crepl)](https://jyywiki.cn/OS/2024/labs/M4.md)
-* [M5: 系统调用 Profiler (sperf)](https://jyywiki.cn/OS/2024/labs/M5.md)
 * [L2: 内核线程管理 (kmt)](https://jyywiki.cn/OS/2024/labs/L2.md)
-* Lecture 20 动态链接和加载(18~20可以重新看下)。Lect21开头还有链接的一部分。
-* Lecture 27 里 实现文件/设备驱动程序/ioctl再看看
+* [M3: GPT-2 并行推理 (gpt.c)](https://jyywiki.cn/OS/2024/labs/M3.md)
 * [M6: 文件系统格式化恢复 (fsrecov)](https://jyywiki.cn/OS/2024/labs/M6.md)
+* Lecture 27 里 实现文件/设备驱动程序/ioctl再看看，28也可以再看看。
 
 📌 [课本](https://pages.cs.wisc.edu/~remzi/OSTEP/)
 
@@ -51,7 +45,21 @@
 * 第 12 章 - Dialogue
 * 第 13 章 - Address Spaces
 * 第 14 章 - Memory API
-* ...
+* 第 15 章 - Address Translation
+* 第 16 章 - Segmentation
+* 第 17 章 - Free Space Management
+* 第 18 章 - Introduction to Paging
+* 第 6 章 - Direct Execution
+* 第 19 章 - Translation Lookaside Buffers
+* 第 20 章 - Advanced Page Tables
+* 第 21 章 - Swapping: Mechanisms
+* 第 22 章 - Swapping: Policies
+* 第 23 章 - Complete VM Systems
+* 第 7 章 - CPU Scheduling
+* 第 8 章 - Multi-level Feedback
+* 第 9 章 - Lottery Scheduling
+* 第 10 章 - Multi-CPU Scheduling
+* 第 11 章 - Summary
 * 第 37 章 - Hard Disk Drives
 * 第 44 章 - Flash-based SSDs
 * 第 36 章 - I/O Devices
@@ -61,5 +69,3 @@
 * 第 38 章 - Redundant Disk Arrays (RAID)
 * 第 42 章 - FSCK and Journaling
 * 第 43 章 - Log-structured File System (LFS)
-
-## OS Finished

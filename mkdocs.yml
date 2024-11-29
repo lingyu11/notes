@@ -5,18 +5,24 @@ nav:
   - 语言:
       - Python: 
         - 语言/Python/PythonCookBook.md
+        - 语言/Python/PythonforDataAnalysis3E.md
+        - 语言/Python/PythonMisc.md
+        - 语言/Python/jupyter/Python数据分析第01天.ipynb
       - C: 语言/C/C.md
       - C++: 
         - 语言/Cpp/Cpp_primer.md
         - 语言/Cpp/Essential_Cpp.md
   - ICS: 
-        - ICS/计算机系统基础实验.md
+        - ICS/ICS_Lectures.md
+        - ICS/ICS_Lab.md
   - OS: 
         - OS/绪论.md
         - OS/并发.md
         - OS/虚拟化.md
         - OS/持久化.md
         - OS/总结.md
+        - OS/Lab.md
+        - OS/SJTU_OS.md
   - 数据结构: data_structure.md
   - 算法: algo.md
   - Linux: 
@@ -28,8 +34,6 @@ nav:
   - Misc: 
       - Memo: Misc/Memo.md
       - Todo: Misc/Todo.md
-      - Learning Material: Misc/LearningMaterial.md
-
 
 theme:
   icon:
@@ -88,6 +92,7 @@ copyright: Copyright &copy; lingyu CC-BY-4.0
 
 # [Extensions]
 plugins:
+  - mkdocs-jupyter
   # [搜索功能]
   # https://squidfunk.github.io/mkdocs-material/plugins/search/
   # 之前中文搜索是 Insider 的功能（https://squidfunk.github.io/mkdocs-material/blog/2022/chinese-search-support/），现在好像已经是默认功能了，

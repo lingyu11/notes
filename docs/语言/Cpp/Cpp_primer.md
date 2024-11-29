@@ -53,41 +53,6 @@
 
         字长（也称为机器字长或处理器字长）是指计算机处理器一次性能够处理的数据位数。现代 32 位处理器意味着它们可以处理 32 位的数据，即 4 个字节。
 
-7. 方法
-
-
-
-<!-- <table>  
-    <tr>    
-        <td colspan="3" style="text-align:center;"><b>C++算数类型</b></td>  
-    </tr>
-    <tr>    
-        <td colspan="1" style="text-align:left;"><b>类型</b></td>
-        <td colspan="1" style="text-align:left;"><b>含义</b></td>
-        <td colspan="1" style="text-align:left;"><b>最小尺寸</b></td>
-    </tr>
-    <tr>    
-        <td style="width:33%; text-align:left;">第二行，第一列</td>   
-        <td style="width:33%; text-align:left;">第二行，第二列</td>   
-        <td style="width:33%; text-align:left;">第二行，第三列</td>  
-    </tr> 
-    <tr>   
-        <td style="width:33%; text-align:left;">第三行，第一列</td>    
-        <td style="width:33%; text-align:left;">第三行，第二列</td>    
-        <td style="width:33%; text-align:left;">第三行，第三列</td>  
-    </tr>  
-    <tr>   
-        <td style="width:33%; text-align:left;">第四行，第一列</td>   
-        <td style="width:33%; text-align:left;">第四行，第二列</td>   
-        <td style="width:33%; text-align:left;">第四行，第三列</td> 
-    </tr> 
-    <tr>    
-        <td style="width:33%; text-align:left;">第五行，第一列</td>    
-        <td style="width:33%; text-align:left;">第五行，第二列</td>    
-        <td style="width:33%; text-align:left;">第五行，第三列</td>  
-    </tr>
-</table> -->
-
 ## Ch2 变量和基础类型
 
 

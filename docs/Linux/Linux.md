@@ -43,6 +43,8 @@
     | /usr | 系统软件资源目录。注意usr不是user的缩写，而是"Unix Softwre Resource"的缩写，所以不是存放用户数据，而是存放系统软件资源的目录。系统中安装的软件大多数保存在这里 |
     | /var | 动态数据保存位置。主要保存缓存、日志以及软件运行所产生的文件 |
 
+    ![alt text](../img/image-21.png)
+
 !!! note "sbin / usr"
 
     sbin中的s表示super，就是超级用户的意思。usr不是user，而是`unix software resource`
