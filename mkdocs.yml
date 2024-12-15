@@ -2,16 +2,50 @@ site_name: lingyu's notes
 
 nav:
   - Home: index.md
-  - 语言:
-      - Python: 
-        - 语言/Python/PythonCookBook.md
-        - 语言/Python/PythonforDataAnalysis3E.md
-        - 语言/Python/PythonMisc.md
-        - 语言/Python/jupyter/Python数据分析第01天.ipynb
-      - C: 语言/C/C.md
-      - C++: 
-        - 语言/Cpp/Cpp_primer.md
-        - 语言/Cpp/Essential_Cpp.md
+  - Python: 
+    - PythonBasic:
+      - 语言/Python/Python-100-Days/PythonBasic/01.初识Python.md
+      - 语言/Python/Python-100-Days/PythonBasic/02.语言元素.md
+      - 语言/Python/Python-100-Days/PythonBasic/03.分支结构.md
+      - 语言/Python/Python-100-Days/PythonBasic/04.循环结构.md
+      - 语言/Python/Python-100-Days/PythonBasic/05.构造程序逻辑.md
+      - 语言/Python/Python-100-Days/PythonBasic/06.函数和模块的使用.md
+      - 语言/Python/Python-100-Days/PythonBasic/07.字符串和常用数据结构.md
+      - 语言/Python/Python-100-Days/PythonBasic/08.面向对象编程基础.md
+      - 语言/Python/Python-100-Days/PythonBasic/09.面向对象进阶.md
+      - 语言/Python/Python-100-Days/PythonBasic/10.图形用户界面和游戏开发.md
+      - 语言/Python/Python-100-Days/PythonBasic/11.文件和异常.md
+      - 语言/Python/Python-100-Days/PythonBasic/12.字符串和正则表达式.md
+      - 语言/Python/Python-100-Days/PythonBasic/13.进程和线程.md
+      - 语言/Python/Python-100-Days/PythonBasic/14.网络编程入门和网络应用开发.md
+      - 语言/Python/Python-100-Days/PythonBasic/15.图像和办公文档处理.md
+    - Python进阶:
+      - 语言/Python/Python-100-Days/Python进阶/16.Python语言进阶.md
+    - DataAnalysis:
+      - 语言/Python/Python-100-Days/DataAnalysis/66.数据分析概述.md
+      - 语言/Python/Python-100-Days/DataAnalysis/67.环境准备.md
+      - 语言/Python/Python-100-Days/DataAnalysis/68.NumPy的应用-1.md
+      - 语言/Python/Python-100-Days/DataAnalysis/69.NumPy的应用-2.md
+      - 语言/Python/Python-100-Days/DataAnalysis/70.NumPy的应用-3.md
+      - 语言/Python/Python-100-Days/DataAnalysis/71.NumPy的应用-4.md
+      - 语言/Python/Python-100-Days/DataAnalysis/72.深入浅出pandas-1.md
+      - 语言/Python/Python-100-Days/DataAnalysis/73.深入浅出pandas-2.md
+      - 语言/Python/Python-100-Days/DataAnalysis/74.深入浅出pandas-3.md
+      - 语言/Python/Python-100-Days/DataAnalysis/75.深入浅出pandas-4.md
+      - 语言/Python/Python-100-Days/DataAnalysis/76.深入浅出pandas-5.md
+      - 语言/Python/Python-100-Days/DataAnalysis/77.深入浅出pandas-6.md
+      - 语言/Python/Python-100-Days/DataAnalysis/78.数据可视化-1.md
+      - 语言/Python/Python-100-Days/DataAnalysis/79.数据可视化-2.md
+      - 语言/Python/Python-100-Days/DataAnalysis/80.数据可视化-3.md
+      - 语言/Python/jupyter/Python数据分析-numpy.ipynb
+      - 语言/Python/jupyter/Python数据分析-pandas.ipynb
+    - 语言/Python/PythonCookBook.md
+    - 语言/Python/PythonforDataAnalysis3E.md
+    - 语言/Python/PythonMisc.md
+  - C: 语言/C/C.md
+  - C++: 
+    - 语言/Cpp/Cpp_primer.md
+    - 语言/Cpp/Essential_Cpp.md
   - ICS: 
         - ICS/ICS_Lectures.md
         - ICS/ICS_Lab.md
@@ -22,12 +56,15 @@ nav:
         - OS/持久化.md
         - OS/总结.md
         - OS/Lab.md
+        - OS/OSTEP.md
+        - OS/CodingForSSD.md
         - OS/SJTU_OS.md
   - 数据结构: data_structure.md
   - 算法: algo.md
   - Linux: 
       - 基础知识: Linux/Linux.md
       - Useful cmd: Linux/useful_cmd.md
+      - 玩转Linux操作系统: Linux/玩转Linux操作系统.md
   - 计算机网络: network.md
   - 数据库: database.md
   - Tool: Tool/tool.md
@@ -106,7 +143,7 @@ plugins:
   # https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/
   # https://squidfunk.github.io/mkdocs-material/plugins/tags/#meta.tags
   # - tags
-  - statistics
+  # - statistics
   - changelog
   - git-revision-date-localized:
       type: datetime
@@ -149,7 +186,7 @@ markdown_extensions:
       # 显示行号
       linenums: true
       # 显示编程语言名称
-      auto_title: true
+      # auto_title: true
       # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#+pymdownx.highlight.line_spans
       line_spans: __span
       # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#+pymdownx.highlight.pygments_lang_class

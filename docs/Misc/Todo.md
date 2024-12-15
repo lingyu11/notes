@@ -5,6 +5,7 @@
 
 📌 第六章：数据编码和处理 https://python3-cookbook.readthedocs.io/zh-cn/latest/chapters/p06_data_encoding_and_process.html
 
+📌 [jackfrued数据分析 P34](https://www.bilibili.com/video/BV13t4y1a7TV?spm_id_from=333.788.videopod.sections&vd_source=2a33d03ec3e67e46971208a7faa0dcda)
 
 ## OS Todo
 📌 [AbstractMachine: 抽象计算机](https://jyywiki.cn/AbstractMachine/)

@@ -21,3 +21,4 @@
 * [Linux C编程一站式学习](https://akaedu.github.io/book/)
 * [awesome-c](https://github.com/oz123/awesome-c)
 * [天坑专业转码自救指南](https://shuiyuan.sjtu.edu.cn/t/topic/267562)
+* [Python手册](https://devdocs.io/)
