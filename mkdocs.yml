@@ -60,7 +60,8 @@ nav:
         - OS/CodingForSSD.md
         - OS/SJTU_OS.md
   - 数据结构: data_structure.md
-  - 算法: algo.md
+  - 算法: 
+    - DS_Algo/leetcode.md
   - Linux: 
       - 基础知识: Linux/Linux.md
       - Useful cmd: Linux/useful_cmd.md
