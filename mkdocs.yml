@@ -61,7 +61,18 @@ nav:
         - OS/SJTU_OS.md
   - 数据结构: data_structure.md
   - 算法: 
-    - DS_Algo/leetcode.md
+    - DS_Algo/滑动窗口与双指针.md
+    - DS_Algo/二分算法.md
+    - DS_Algo/单调栈.md
+    - DS_Algo/网格图.md
+    - DS_Algo/位运算.md
+    - DS_Algo/图论算法.md
+    - DS_Algo/动态规划.md
+    - DS_Algo/常用数据结构.md
+    - DS_Algo/数学算法.md
+    - DS_Algo/贪心与思维.md
+    - DS_Algo/链表_二叉树与回溯.md
+    - DS_Algo/字符串.md
   - Linux: 
       - 基础知识: Linux/Linux.md
       - Useful cmd: Linux/useful_cmd.md
