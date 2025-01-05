@@ -141,7 +141,8 @@ copyright: Copyright &copy; lingyu CC-BY-4.0
 
 # [Extensions]
 plugins:
-  - mkdocs-jupyter
+  # 暂时禁用 Jupyter 插件，因为拖慢渲染速度
+  # - mkdocs-jupyter
   # [搜索功能]
   # https://squidfunk.github.io/mkdocs-material/plugins/search/
   # 之前中文搜索是 Insider 的功能（https://squidfunk.github.io/mkdocs-material/blog/2022/chinese-search-support/），现在好像已经是默认功能了，
@@ -150,6 +151,13 @@ plugins:
         - zh
         - en
         - ja
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+          remove_comments: true
+      cache_safe: true
   # - localsearch
   # [给单篇文章添加标签]
   # https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/
