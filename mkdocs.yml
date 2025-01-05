@@ -37,8 +37,8 @@ nav:
       - 语言/Python/Python-100-Days/DataAnalysis/78.数据可视化-1.md
       - 语言/Python/Python-100-Days/DataAnalysis/79.数据可视化-2.md
       - 语言/Python/Python-100-Days/DataAnalysis/80.数据可视化-3.md
-      - 语言/Python/jupyter/Python数据分析-numpy.ipynb
-      - 语言/Python/jupyter/Python数据分析-pandas.ipynb
+      # - 语言/Python/jupyter/Python数据分析-numpy.ipynb
+      # - 语言/Python/jupyter/Python数据分析-pandas.ipynb
     - 语言/Python/PythonCookBook.md
     - 语言/Python/PythonforDataAnalysis3E.md
     - 语言/Python/PythonMisc.md
@@ -184,7 +184,7 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.magiclink
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.tabbed:
       alternate_style: true 

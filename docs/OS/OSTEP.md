@@ -1,7 +1,7 @@
 # OSTEP
 
 ## 资料
-* [OSTEP](docs/OS/SJTU_OS.md)
+* [OSTEP](https://pages.cs.wisc.edu/~remzi/OSTEP/)
 
 ## Introduction
 1. 📌 P13 Beyond Libraries: Protection 
