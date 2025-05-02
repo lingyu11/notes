@@ -49,6 +49,7 @@ nav:
   - ICS: 
         - ICS/ICS_Lectures.md
         - ICS/ICS_Lab.md
+        - ICS/程序的表示转换与链接.md
   - OS: 
         - OS/绪论.md
         - OS/并发.md
@@ -75,6 +76,7 @@ nav:
     - DS_Algo/字符串.md
   - CSAPP: 
       - CSAPP/CH1.md
+      - CSAPP/内存.md
   - Linux: 
       - 基础知识: Linux/Linux.md
       - Useful cmd: Linux/useful_cmd.md
@@ -174,6 +176,7 @@ plugins:
       enable_creation_date: true
       exclude:
         - index.md
+  - mkdocs-pdf
 markdown_extensions:
   # [数学公式支持]
   # https://squidfunk.github.io/mkdocs-material/reference/math/#katex

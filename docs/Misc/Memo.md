@@ -22,6 +22,7 @@
     - `pip install mkdocs-changelog-plugin`
     - `pip install mkdocs-git-revision-date-localized-plugin`
     - `pip install mkdocs-minify-plugin`
+    - `pip install mkdocs-pdf`
 
 
 ## Useful links
