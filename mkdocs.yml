@@ -50,6 +50,9 @@ nav:
         - ICS/ICS_Lectures.md
         - ICS/ICS_Lab.md
         - ICS/程序的表示转换与链接.md
+        - ICS/程序的执行和存储访问.md
+  - 计组: 
+        - 计组/计算机组成原理(上).md
   - OS: 
         - OS/绪论.md
         - OS/并发.md
