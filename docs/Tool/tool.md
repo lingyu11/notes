@@ -29,6 +29,8 @@
 * `-d`: 反汇编代码段。反汇编指定的目标文件或可执行文件中的代码段，不包括其他段（如数据段、BSS 段等）。
 * `-D`: 反汇编所有段。包括代码段和数据段。
 * `-h`: 显示 ELF 文件的头信息。
+* `-S`: 在反汇编后的内容中添加源代码。
+* `-t`: 显示符号表。包含所有函数、全局变量的名称和存储地址。
 
 ## readelf
 * ELF (Executable and Linkable Format)是一种用于可执行文件、目标文件和共享库的标准文件格式，广泛应用于类 Unix 操作系统中。
@@ -41,15 +43,20 @@
 * `starti`: 开始执行程序，并在执行第一条指令之前停止。这个命令通常用于在程序开始时设置断点，以便检查程序的初始状态。
 * `layout asm`: 切换到汇编代码布局模式
 * `layout src`: 切换到源代码布局模式
+* `l`: 列出当前行附近的源代码。
+* `b main`: 设置一个断点，当程序执行到 main 函数时停止。
+* `b *0x7c00`: 设置一个断点，当程序执行到地址 0x7c00 时停止。
 * `si`: 单步执行一条汇编指令。
 * `enter键`：重复上一个命令。
 * `p $rsp`: 打印寄存器 `rsp` 的当前值，也就是显示栈指针的值（一个地址，表示栈顶的内存地址）。例子输出`$1 = (void *) 0x7fffffffdcb0`
 * `x/x $rsp`: 以十六进制格式检查内存地址 `$rsp` 处的值。x 命令是GDB中的一个检查内存的命令，/x 表示以十六进制格式显示，$rsp 是寄存器 `rsp` 的当前值，它指向栈顶。例子输出`0x7fffffffdcb0: 0x00000001`，这个`M[rsp]`是1显然非法，进而导致segmentation fault。
 * `x/i $eip`: `/i`这是 x 命令的一个参数，表示以指令的形式显示内存内容。输出`0x0000000000007c00:  jmp    0x7c00`
+* `x/6i 0x3ffffff000`: 以十六进制格式显示地址 0x3ffffff000 处开始的 6 条指令。
 * `x/16b 0x7c00`: 以字节为单位，从内存地址 0x7c00 开始，显示 16 个字节的内容。
+* `x/2xw 0xffffd2bc`: 从0xffffd2bc地址开始的2个字（一个字是4个字节）的存储单元内容，并用十六进制表示。`/t`则是以二进制显示。
 * `tui disable`: 禁用 TUI（Text User Interface，文本用户界面）模式，使 GDB 恢复到默认的命令行界面。
-* `info registers`: 显示当前所有寄存器的值。
-* `info registers eflag`: 显示当前 eflag 寄存器的值。
+* `info registers` or `i r`: 显示当前所有寄存器的值。
+* `info registers eflag` or `i r eflag`: 显示当前 eflag 寄存器的值。
 * `start`: 开始调试。
 * `s`: 单步执行。
 * `r`: 重新执行程序，直到程序结束或遇到断点。
@@ -67,6 +74,11 @@
 * `-x init.gdb`: 执行 init.gdb 文件中的命令。
 * `inferior 2`: 切换到子进程 2。
 * `start minimal`: 以minimal这个可执行文件作为参数运行程序。（例如在debug loader程序时，想看loader是如何将minimal加载到内存的，可以在gdb loader后输入这个）
+* `info locals`: 显示当前函数的局部变量的值。
+* `info breakpoints`: 显示当前设置的所有断点信息。
+* `bt`: backtrace，显示当前的调用栈。
+* `frame 1`: 切换到调用栈中的第 1 个帧，`info frame`: 显示当前帧的信息。
+* `b sum_to if i==5`: 设置一个条件断点，当 i 的值等于 5 时触发断点。
 
 ### init.gdb示例
 ```bash

@@ -11,7 +11,7 @@
 * 如何更新笔记：
     - Step1: 部署`C:\Users\username\lingyu11.github.io> python -m mkdocs gh-deploy --config-file ../notes/mkdocs.yml --remote-branch master`
     - Step2: 存档 `C:\Users\username\notes> git add ./git commit -m "commit message"/git push`
-* 本地笔记重启：`C:\Users\username\notes>python -m mkdocs serve --dirtyreload`，`--dirtyreload`是为了加快 build 的速度
+* 本地笔记重启：`C:\Users\username\notes>python -m mkdocs serve --dirtyreload`，其中`--dirtyreload`是为了加快 build 的速度
 * 换电脑后需要 clone 的仓库为：
     - [源文档](https://github.com/lingyu11/notes/tree/master)
     - [site目录下的文档](https://github.com/lingyu11/lingyu11.github.io)

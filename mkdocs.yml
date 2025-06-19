@@ -51,6 +51,8 @@ nav:
         - ICS/ICS_Lab.md
         - ICS/程序的表示转换与链接.md
         - ICS/程序的执行和存储访问.md
+        - ICS/异常、中断和输入输出.md
+        - ICS/编程与调试实践.md
   - 计组: 
         - 计组/计算机组成原理(上).md
   - OS: 
@@ -63,6 +65,7 @@ nav:
         - OS/OSTEP.md
         - OS/CodingForSSD.md
         - OS/SJTU_OS.md
+        - OS/MIT6.S081.md
   - 数据结构: data_structure.md
   - 算法: 
     - DS_Algo/滑动窗口与双指针.md

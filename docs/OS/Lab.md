@@ -178,7 +178,7 @@
 
 ## [M2: 协程库 (libco)](https://jyywiki.cn/OS/2024/labs/M2.md)
 
-1. `setjmp` 和 `longjmp`: `setjmp` 和 `longjmp` 是 C 语言标准库提供的一组用于非局部跳转的函数。它们通常一起使用，用于实现协程（coroutine）、异常处理机制或者在函数调用栈中进行长距离跳转。
+1. [`setjmp` 和 `longjmp`:](../ICS/编程与调试实践.md#setjmp_longjmp) `setjmp` 和 `longjmp` 是 C 语言标准库提供的一组用于非局部跳转的函数。它们通常一起使用，用于实现协程（coroutine）、异常处理机制或者在函数调用栈中进行长距离跳转。
 
     * 📥`setjmp` 函数用于保存当前的程序执行环境（上下文）到一个 `jmp_buf` 类型的缓冲区中。这个缓冲区通常是一个数组，用于存储寄存器的值、栈指针、程序计数器等关键信息。`setjmp` 函数的返回值有两种情况：
 
