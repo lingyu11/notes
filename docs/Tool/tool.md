@@ -77,6 +77,7 @@
 * `info locals`: 显示当前函数的局部变量的值。
 * `info breakpoints`: 显示当前设置的所有断点信息。
 * `bt`: backtrace，显示当前的调用栈。
+* `where`: 显示当前执行位置的调用栈信息。和`bt`功能一样。
 * `frame 1`: 切换到调用栈中的第 1 个帧，`info frame`: 显示当前帧的信息。
 * `b sum_to if i==5`: 设置一个条件断点，当 i 的值等于 5 时触发断点。
 

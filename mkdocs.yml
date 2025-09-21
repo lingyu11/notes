@@ -66,7 +66,8 @@ nav:
         - OS/CodingForSSD.md
         - OS/SJTU_OS.md
         - OS/MIT6.S081.md
-  - 数据结构: data_structure.md
+  - 数据结构: 
+    - DS_Algo/CS61B/CS61B.md
   - 算法: 
     - DS_Algo/滑动窗口与双指针.md
     - DS_Algo/二分算法.md

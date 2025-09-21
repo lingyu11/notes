@@ -2891,6 +2891,8 @@ there’s an error.
     }
     ```
 
+    ![alt text](../img/image-66.png)
+
 ## Lab10: mmap
 1. mmap
 
