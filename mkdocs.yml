@@ -81,6 +81,8 @@ nav:
     - DS_Algo/贪心与思维.md
     - DS_Algo/链表_二叉树与回溯.md
     - DS_Algo/字符串.md
+    - DS_Algo/HOT100.md
+    - DS_Algo/HOT150.md
   - CSAPP: 
       - CSAPP/CH1.md
       - CSAPP/内存.md
