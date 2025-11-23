@@ -86,6 +86,7 @@ nav:
   - CSAPP: 
       - CSAPP/CH1.md
       - CSAPP/内存.md
+      - CSAPP/Lab.md
   - Linux: 
       - 基础知识: Linux/Linux.md
       - Useful cmd: Linux/useful_cmd.md
@@ -105,6 +106,7 @@ theme:
   features:
     # 使用 Tab 来进行分类
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-tabs
+    # - toc.integrate  # 将目录集成到导航中
     - navigation.tabs
     # 返回顶部的按钮，在上滑时出现
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#back-to-top-button

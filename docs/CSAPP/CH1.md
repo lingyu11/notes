@@ -4,9 +4,23 @@
 * [CMU CSAPP 英文视频](https://www.bilibili.com/video/BV1iW411d7hd/?vd_source=2a33d03ec3e67e46971208a7faa0dcda)
 * [课件](https://www.cs.cmu.edu/afs/cs/academic/class/15213-f15/www/schedule.html)
 * [九曲阑干](https://www.bilibili.com/video/BV1cD4y1D7uR/?vd_source=2a33d03ec3e67e46971208a7faa0dcda)
-* [arthals lab参考](https://arthals.ink/blog/data-lab)
-* [小土刀](https://www.wdxtub.com/blog/csapp/thick-csapp-lab-0)
+* [小土刀👍](https://www.wdxtub.com/blog/csapp/thick-csapp-lab-0)
+* [ICS ppt](https://slide.huh.moe/3)
 * [fengmuzi](https://fengmuzi2003.gitbook.io/csapp3e)
+
+## 课程概述
+
+课程 | Lab
+--- | ---
+程序与数据 | Data Lab
+处理器体系结构 | Bomb Lab / Attack Lab
+程序性能 | Arch Lab / Performance Lab
+分级存储器体系结构 | Cache Lab
+虚拟内存 | Malloc Lab
+异常控制流 | Shell Lab
+网络、并发 | Proxy Lab
+
+
 
 ## Lecture 1 Course overview
 

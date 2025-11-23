@@ -24,6 +24,16 @@
     - `pip install mkdocs-minify-plugin`
     - `pip install mkdocs-pdf`
 
+## github 上传 repo
+
+```
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/lingyu11/CSAPP-Lab.git
+git push -u origin main
+```
 
 ## Useful links
 
