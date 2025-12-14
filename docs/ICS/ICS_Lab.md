@@ -1,13 +1,14 @@
 # Lab
 
-## 参考博客
-* [NOSAE's Blog](https://www.cnblogs.com/nosae/p/17045249.html)
+## 参考资料
+* [实验网站](https://nju-projectn.github.io/ics-pa-gitbook/ics2024/)
+* [NOSAE's Blog](https://www.cnblogs.com/nosae/category/2263575.html)
 
 ## PA0 开发环境配置
 
 1. 本实验使用的 ISA 是 riscv32。
 
-2. 参考[博客](https://www.cnblogs.com/DreamW1ngs/p/18430400)中关于clangd的配置，这样vscode就可以正确跳转到各个函数了。（亲测，不是很好用，有的时候没法跳转🤷‍♂️）
+2. 参考[博客](https://www.cnblogs.com/DreamW1ngs/p/18430400)中关于clangd的配置，这样vscode就可以正确跳转到各个函数了。（亲测，不是很好用，不建议，有的时候没法跳转🤷‍♂️）
 
     `clangd`是一个开源的语言服务器，可以配合`CompileDB`项目生成`compile_commands.json`（所有符号表索引数据库），方便只参与编译的文件代码进行快速跳转。
     
@@ -92,19 +93,37 @@
 
 2. 优美地退出: 在运行NEMU之后直接键入q退出, 终端输出了一些错误信息: 
 
-    ```
+    ```bash
+    ~/ics2024/nemu$ make run
     (nemu) q
     make: *** [/home/lingyu/ics2024/nemu/scripts/native.mk:38: run] Error 1
     ```
 
-    Root Cause: 是由于`is_exit_status_bad`函数返回了-1，`main`函数直接返回了此函数返回的结果，make检测到该可执行文件返回了-1，因此报错。通过分析该函数得到解决方案：在输入q中途退出nemu后，将`nemu_state.state`设成`NEMU_QUIT`即可。
+    然而，若是直接运行编译出来的可执行文件的话是不会报错的：
+
+    ```bash
+    ~/ics2024/nemu$ ./build/riscv32-nemu-interpreter
+    (nemu) q
+    ```
+
+    Root Cause: 是由于`is_exit_status_bad`函数返回了1，`main`函数直接返回了此函数返回的结果，make检测到该可执行文件返回了1，因此报错。[make手册](https://www.gnu.org/software/make/manual/html_node/Errors.html)：make执行shell命令时，如果返回值是1，则退出当前rule执行，显示报错。
+    
+    通过分析该函数得到解决方案：在输入q中途退出nemu后，将`nemu_state.state`设成`NEMU_QUIT`即可。
 
     Fix:
 
     ```C
-    static int cmd_q(char *args) {
+    static int cmd_q(char *args) 
+    {
         nemu_state.state = NEMU_QUIT; // ✅Fix
         return -1;
+    }
+
+    int is_exit_status_bad() 
+    {
+        int good = (nemu_state.state == NEMU_END && nemu_state.halt_ret == 0) ||
+            (nemu_state.state == NEMU_QUIT);
+        return !good;
     }
     ```
 
@@ -129,7 +148,8 @@
     第二步，编写`cmd_si`函数，即`si`具体要执行的东西。
 
     ```C
-    static int cmd_si(char *args) {
+    static int cmd_si(char *args) 
+    {
         char *arg = strtok(NULL, " ");
         int n;
 
@@ -198,8 +218,46 @@
     }
     ```
 
+    输出：
+
+    ```bash
+    (nemu) info r
+    $0      0x00000000
+    ra      0x00000000
+    sp      0x00000000
+    gp      0x00000000
+    tp      0x00000000
+    t0      0x80000000
+    t1      0x00000000
+    t2      0x00000000
+    s0      0x00000000
+    s1      0x00000000
+    a0      0x00000000
+    a1      0x00000000
+    a2      0x00000000
+    a3      0x00000000
+    a4      0x00000000
+    a5      0x00000000
+    a6      0x00000000
+    a7      0x00000000
+    s2      0x00000000
+    s3      0x00000000
+    s4      0x00000000
+    s5      0x00000000
+    s6      0x00000000
+    s7      0x00000000
+    s8      0x00000000
+    s9      0x00000000
+    s10     0x00000000
+    s11     0x00000000
+    t3      0x00000000
+    t4      0x00000000
+    t5      0x00000000
+    t6      0x00000000
+    ```
+
 ### 扫描内存 x N EXPR
-5. 实现扫描内存 x N EXPR
+5. 实现扫描内存 x N EXPR: 求出表达式EXPR的值, 将结果作为起始内存地址, 以十六进制形式输出连续的 N 个 4 字节。
 
     第一步，注册命令。
 
@@ -248,6 +306,28 @@
 
     第三步，由于用到了`vaddr_read`，需要`#include <memory/vaddr.h>`。
 
+    输出：
+
+    ```bash
+    (nemu) x 10 0x80000000
+    0x80000000: 0x00000297 0x00028823 0x0102c503 0x00100073 
+    0x80000010: 0xdeadbe00 0xdcdcdcdc 0xdcdcdcdc 0xdcdcdcdc 
+    0x80000020: 0xdcdcdcdc 0xdcdcdcdc
+    ```
+
+    这和读入的客户程序镜像文件对应上了（客户程序读入`RESET_VECTOR` 0x80000000处）：
+
+    ```C
+    static const uint32_t img [] = 
+    {
+        0x00000297,  // auipc t0,0
+        0x00028823,  // sb  zero,16(t0)
+        0x0102c503,  // lbu a0,16(t0)
+        0x00100073,  // ebreak (used as nemu_trap)
+        0xdeadbeef,  // some data
+    };
+    ```
+
 ### 表达式求值 p EXPR
 6. 实现表达式求值 p EXPR
 
@@ -280,6 +360,230 @@
         }
 
         return 0;
+    }
+    ```
+
+    第三步，完善 `expr` 函数：首先调用`make_token`提取符号，再调用`eval`进行计算。
+
+    ```C
+    word_t expr(char *e, bool *success) 
+    {
+        if (!make_token(e)) 
+        {
+            *success = false;
+            return 0;
+        }
+
+        return eval(0, nr_token - 1, success); // ✅
+    }
+    ```
+
+    第四步，实现`make_token`的功能：每次都用所有的正则来匹配当前位置的字符，如果有匹配成功的就加入这个token（空字符除外），如果都匹配不成功就打印错误信息并返回false给上层函数。
+
+    ```C
+    static bool make_token(char *e) 
+    {
+        int position = 0;
+        int i;
+        regmatch_t pmatch;
+
+        nr_token = 0;
+
+        while (e[position] != '\0') 
+        {
+            /* Try all rules one by one. */
+            for (i = 0; i < NR_REGEX; i ++) 
+            {
+                if (regexec(&re[i], e + position, 1, &pmatch, 0) == 0 && pmatch.rm_so == 0) 
+                {
+                    char *substr_start = e + position;
+                    int substr_len = pmatch.rm_eo;
+
+                    Log("match rules[%d] = \"%s\" at position %d with len %d: %.*s",
+                        i, rules[i].regex, position, substr_len, substr_len, substr_start);
+                    
+                    position += substr_len;
+                    
+                    // ================= solution =================
+                    if (rules[i].token_type == TK_NOTYPE) break;
+
+                    tokens[nr_token].type = rules[i].token_type;
+                    switch (rules[i].token_type) 
+                    {
+                        case TK_NUM:
+                        case TK_REG:
+                        case TK_VAR:
+                            strncpy(tokens[nr_token].str, substr_start, substr_len);
+                            tokens[nr_token].str[substr_len] = '\0';
+                            // todo: handle overflow (token exceeding size of 32B)
+                    }
+                    nr_token++;
+                    // ===========================================
+
+                    break;
+                }
+            }
+
+            if (i == NR_REGEX) 
+            {
+                printf("no match at position %d\n%s\n%*.s^\n", position, e, position, "");
+                return false;
+            }
+        }
+
+        return true;
+    }
+    ```
+
+    make_token用到的token类型以及对应的正则表达式如下：
+
+    ```C
+    enum 
+    {
+        TK_NOTYPE = 256, TK_EQ,
+        TK_NUM, // 10 & 16
+        TK_REG,
+        TK_VAR,
+    };
+
+    static struct rule 
+    {
+        const char *regex;
+        int token_type;
+    } rules[] = 
+    {
+        {" +", TK_NOTYPE},    // spaces
+        {"\\+", '+'},         // plus
+        {"-", '-'},
+        {"\\*", '*'},
+        {"/", '/'},
+        {"==", TK_EQ},        // equal
+        {"\\(", '('},
+        {"\\)", ')'},
+
+        {"[0-9]+", TK_NUM},   // TODO: non-capture notation (?:pattern) makes compilation failed
+        {"\\$\\w+", TK_REG},
+        {"[A-Za-z_]\\w*", TK_VAR},
+    };
+    ```
+
+    第五步，完善`eval`函数:
+
+    ```C
+    bool check_parentheses(int p, int q) 
+    {
+        if (tokens[p].type == '(' && tokens[q].type == ')') 
+        {
+            int par = 0; // 括号计数器
+            for (int i = p; i <= q; i++) 
+            {
+                if (tokens[i].type == '(') par++;
+                else if (tokens[i].type == ')') par--;
+
+                if (par == 0) return i == q; // 最外层括号完整匹配
+            }
+        }
+        return false;
+    }
+
+    // 查找主操作符的位置
+    // 主操作符是指整个表达式中优先级最低的操作符，它是表达式求值时最后执行的操作符
+    int find_major(int p, int q) 
+    {
+        int ret = -1, par = 0, op_type = 0;
+        for (int i = p; i <= q; i++) 
+        {
+            if (tokens[i].type == TK_NUM) 
+            {
+                continue;
+            }
+            if (tokens[i].type == '(') 
+            {
+                par++;
+            } 
+            else if (tokens[i].type == ')') 
+            {
+                if (par == 0) 
+                {
+                    return -1;
+                }
+                par--;
+            } 
+            else if (par > 0) // 忽略括号内的操作符
+            {
+                continue;
+            } 
+            else              // 处理括号外的操作符
+            {
+                int tmp_type = 0;
+                switch (tokens[i].type) 
+                {
+                    case '*': case '/': tmp_type = 1; break;
+                    case '+': case '-': tmp_type = 2; break;
+                    default: assert(0);
+                }
+                if (tmp_type >= op_type) 
+                {
+                    op_type = tmp_type;
+                    ret = i;
+                }
+            }
+        }
+        if (par != 0) return -1;
+        return ret;
+    }
+
+    word_t eval(int p, int q, bool *ok) 
+    {
+        *ok = true;
+        if (p > q) 
+        {
+            *ok = false;
+            return 0;
+        } 
+        else if (p == q) 
+        {
+            if (tokens[p].type != TK_NUM) 
+            {
+                *ok = false;
+                return 0;
+            }
+            word_t ret = strtol(tokens[p].str, NULL, 10);
+            return ret;
+        } 
+        else if (check_parentheses(p, q)) 
+        {
+            return eval(p + 1, q - 1, ok);
+        } 
+        else 
+        {    
+            int major = find_major(p, q);
+            if (major < 0) 
+            {
+                *ok = false;
+                return 0;
+            }
+
+            word_t val1 = eval(p, major - 1, ok);
+            if (!*ok) return 0;
+            word_t val2 = eval(major + 1, q, ok);
+            if (!*ok) return 0;
+            
+            switch(tokens[major].type) 
+            {
+                case '+': return val1 + val2;
+                case '-': return val1 - val2;
+                case '*': return val1 * val2;
+                case '/': 
+                    if (val2 == 0) 
+                    {
+                    *ok = false;
+                    return 0;
+                    } 
+                    return (sword_t)val1 / (sword_t)val2; // e.g. -1/2, may not pass the expr test
+                default: assert(0);
+            }
+        }
     }
     ```
 

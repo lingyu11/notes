@@ -46,6 +46,11 @@ nav:
   - C++: 
     - 语言/Cpp/Cpp_primer.md
     - 语言/Cpp/Essential_Cpp.md
+  - CS61A:
+    - 语言/CS61A/CS61A_Lectures.md
+    - 语言/CS61A/CS61A_HW.md
+    - 语言/CS61A/CS61A_Lab.md
+    - 语言/CS61A/CS61A_Project.md
   - ICS: 
         - ICS/ICS_Lectures.md
         - ICS/ICS_Lab.md

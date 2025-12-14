@@ -1,6 +1,6 @@
 # Lab
 
-## 参考博客
+## 参考资料
 * [lab 代码下载](https://csapp.cs.cmu.edu/3e/labs.html), [我的lab repo](https://github.com/lingyu11/CSAPP-Lab)
 * [PKU ICS lab参考](https://github.com/zhuozhiyongde/Introduction-to-Computer-System-2023Fall-PKU), [我的PKU lab repo](https://github.com/lingyu11/Lab-CSAPP#)
 * [arthals lab blog](https://arthals.ink/blog/data-lab)
@@ -2423,7 +2423,7 @@
     rmmovq %r8, (%rsi)
     ```
 
-    Y86-64处理器的流水线有 F(取指)、D(译码)、E(执行)、M(访存)、W(写回) 五个阶段，D 阶段才读取寄存器，M 阶段才读取对应内存值，即使使用转发来避免数据冒险，这其中也至少会有一个气泡。像这样:
+    Y86-64处理器的流水线有 F(取指)、D(译码)、E(执行)、M(访存)、W(写回) 五个阶段，其中D(译码)是读取寄存器，E(执行)是ALU计算，M(访存)是读取对应内存值，W(写回)是将结果写回寄存器。D 阶段才读取寄存器，M 阶段才读取对应内存值，即使使用转发来避免数据冒险，这其中也至少会有一个气泡。像这样:
 
     ```asm
     mrmovq (%rdi), %r8
@@ -2431,7 +2431,7 @@
     rmmovq %r8, (%rsi)
     ```
 
-    个优化办法是，多取一个寄存器，连续进行两次数据复制:
+    一个优化办法是，多取一个寄存器，连续进行两次数据复制:
 
     ```asm
     mrmovq (%rdi), %r8

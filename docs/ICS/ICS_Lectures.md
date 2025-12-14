@@ -2,7 +2,6 @@
 
 ## 资料
 * [课程网站](http://www.why.ink:8080/ICS/2024/Main_Page)
-* [实验网站](https://nju-projectn.github.io/ics-pa-gitbook/ics2024/)
 * [课程视频](https://www.bilibili.com/video/BV11BpFe4EmM/?spm_id_from=333.788&vd_source=2a33d03ec3e67e46971208a7faa0dcda)
 
 ## Lecture 1 The Missing Course of Your CS Education

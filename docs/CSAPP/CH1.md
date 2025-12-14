@@ -4,7 +4,7 @@
 * [CMU CSAPP 英文视频](https://www.bilibili.com/video/BV1iW411d7hd/?vd_source=2a33d03ec3e67e46971208a7faa0dcda)
 * [课件](https://www.cs.cmu.edu/afs/cs/academic/class/15213-f15/www/schedule.html)
 * [九曲阑干](https://www.bilibili.com/video/BV1cD4y1D7uR/?vd_source=2a33d03ec3e67e46971208a7faa0dcda)
-* [小土刀👍](https://www.wdxtub.com/blog/csapp/thick-csapp-lab-0)
+* [小土刀](https://www.wdxtub.com/blog/csapp/thick-csapp-lab-0)
 * [ICS ppt](https://slide.huh.moe/3)
 * [fengmuzi](https://fengmuzi2003.gitbook.io/csapp3e)
 
