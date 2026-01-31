@@ -42,15 +42,15 @@ nav:
     - 语言/Python/PythonCookBook.md
     - 语言/Python/PythonforDataAnalysis3E.md
     - 语言/Python/PythonMisc.md
+    - CS61A:
+      - 语言/CS61A/CS61A_Lectures.md
+      - 语言/CS61A/CS61A_HW.md
+      - 语言/CS61A/CS61A_Lab.md
+      - 语言/CS61A/CS61A_Project.md
   - C: 语言/C/C.md
   - C++: 
     - 语言/Cpp/Cpp_primer.md
     - 语言/Cpp/Essential_Cpp.md
-  - CS61A:
-    - 语言/CS61A/CS61A_Lectures.md
-    - 语言/CS61A/CS61A_HW.md
-    - 语言/CS61A/CS61A_Lab.md
-    - 语言/CS61A/CS61A_Project.md
   - ICS: 
         - ICS/ICS_Lectures.md
         - ICS/ICS_Lab.md
@@ -92,6 +92,9 @@ nav:
       - CSAPP/CH1.md
       - CSAPP/内存.md
       - CSAPP/Lab.md
+  - AI: 
+    - AI/LLM.md
+    - AI/BuildGptFromScratch.md
   - Linux: 
       - 基础知识: Linux/Linux.md
       - Useful cmd: Linux/useful_cmd.md
