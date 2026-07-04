@@ -97,6 +97,7 @@ nav:
     - AI/BuildGptFromScratch.md
     - AI/micrograd_from_scratch.ipynb
     - AI/build_makemore.ipynb
+    - AI/build_makemore_mlp.ipynb
     - AI/动手学深度学习.md
     - AI/李宏毅机器学习.md
     - AI/吴恩达机器学习.md
