@@ -101,6 +101,8 @@ nav:
     - AI/动手学深度学习.md
     - AI/李宏毅机器学习.md
     - AI/吴恩达机器学习.md
+    - AI/CS336.md
+    - AI/PyTorch深度学习实践.md
   - Linux: 
       - 基础知识: Linux/Linux.md
       - Useful cmd: Linux/useful_cmd.md
