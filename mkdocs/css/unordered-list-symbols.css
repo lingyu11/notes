@@ -1,0 +1,10 @@
+/* 强制所有层级有序列表全部使用阿拉伯数字 */
+ol {
+  list-style-type: decimal !important;
+}
+ol ol {
+  list-style-type: decimal !important;
+}
+ol ol ol {
+  list-style-type: decimal !important;
+}

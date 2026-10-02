@@ -71,6 +71,23 @@ nav:
         - OS/CodingForSSD.md
         - OS/SJTU_OS.md
         - OS/MIT6.S081.md
+        - 操作系统真象还原:
+          - OS/操作系统真象还原/操作系统真相还原-第00章.md
+          - OS/操作系统真象还原/操作系统真相还原-第01章.md
+          - OS/操作系统真象还原/操作系统真相还原-第02章.md
+          - OS/操作系统真象还原/操作系统真相还原-第03章.md
+          - OS/操作系统真象还原/操作系统真相还原-第04章.md
+          - OS/操作系统真象还原/操作系统真相还原-第05章.md
+          - OS/操作系统真象还原/操作系统真相还原-第06章.md
+          - OS/操作系统真象还原/操作系统真相还原-第07章.md
+          - OS/操作系统真象还原/操作系统真相还原-第08章.md
+          - OS/操作系统真象还原/操作系统真相还原-第09章.md
+          - OS/操作系统真象还原/操作系统真相还原-第10章.md
+          - OS/操作系统真象还原/操作系统真相还原-第11章.md
+          - OS/操作系统真象还原/操作系统真相还原-第12章.md
+          - OS/操作系统真象还原/操作系统真相还原-第13章.md
+          - OS/操作系统真象还原/操作系统真相还原-第14章.md
+          - OS/操作系统真象还原/操作系统真相还原-第15章.md
   - 数据结构: 
     - DS_Algo/CS61B/CS61B.md
   - 算法: 
@@ -92,6 +109,7 @@ nav:
       - CSAPP/CH1.md
       - CSAPP/内存.md
       - CSAPP/Lab.md
+      - CSAPP/CS61C.md
   - AI: 
     - AI/LLM.md
     - AI/BuildGptFromScratch.md
@@ -119,6 +137,7 @@ theme:
     logo: material/notebook-outline
   language: zh
   name: material
+  mermaid: true
   features:
     # 使用 Tab 来进行分类
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-tabs
@@ -246,7 +265,11 @@ markdown_extensions:
       anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   # [Markdown 提示]
   # https://squidfunk.github.io/mkdocs-material/reference/admonitions/
   - admonition
@@ -274,3 +297,4 @@ extra_css:
   # 无序列表符号自定义
   - mkdocs/css/unordered-list-symbols.css
   - css/table.css
+  - css/mermaid.css
