@@ -68,7 +68,6 @@ nav:
         - OS/总结.md
         - OS/Lab.md
         - OS/OSTEP.md
-        - OS/CodingForSSD.md
         - OS/SJTU_OS.md
         - OS/MIT6.S081.md
         - 操作系统真象还原:
@@ -88,6 +87,10 @@ nav:
           - OS/操作系统真象还原/操作系统真相还原-第13章.md
           - OS/操作系统真象还原/操作系统真相还原-第14章.md
           - OS/操作系统真象还原/操作系统真相还原-第15章.md
+        - FreeRTOS:
+          - OS/FreeRTOS/FreeRTOS_尚硅谷.md
+  - SSD:
+    - SSD/CodingForSSD.md
   - 数据结构: 
     - DS_Algo/CS61B/CS61B.md
   - 算法: 
@@ -117,7 +120,22 @@ nav:
     - AI/build_makemore.ipynb
     - AI/build_makemore_mlp.ipynb
     - AI/动手学深度学习.md
-    - AI/李宏毅机器学习.md
+    - 李宏毅机器学习:
+      - AI/李宏毅机器学习/CH1_机器学习基本概念.md
+      - AI/李宏毅机器学习/CH2_机器学习任务攻略.md
+      - AI/李宏毅机器学习/CH3_卷积神经网络CNN.md
+      - AI/李宏毅机器学习/CH4_自注意力机制.md
+      - AI/李宏毅机器学习/CH5_Transformer.md
+      - AI/李宏毅机器学习/CH6_生成式对抗网络GAN.md
+      - AI/李宏毅机器学习/CH7_自监督学习.md
+      - AI/李宏毅机器学习/CH8_自编码器.md
+      - AI/李宏毅机器学习/CH9_机器学习的可解释性.md
+      - AI/李宏毅机器学习/CH10_来自人类的恶意攻击.md
+      - AI/李宏毅机器学习/CH11_领域自适应.md
+      - AI/李宏毅机器学习/CH12_增强式学习.md
+      - AI/李宏毅机器学习/CH13_神经网络压缩.md
+      - AI/李宏毅机器学习/CH14_机器终身学习.md
+      - AI/李宏毅机器学习/CH15_元学习.md
     - AI/吴恩达机器学习.md
     - AI/CS336.md
     - AI/PyTorch深度学习实践.md
