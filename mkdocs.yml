@@ -91,6 +91,23 @@ nav:
           - OS/FreeRTOS/FreeRTOS_尚硅谷.md
   - SSD:
     - SSD/CodingForSSD.md
+    - SSD/A Beginner's Guide to SSD Firmware.md
+    - ssd-articles:
+        - SSD/ssd-articles/第 1 章 存储介质演进史.md
+        - SSD/ssd-articles/第 2 章 SSD 是什么：从用户视角理解.md
+        - SSD/ssd-articles/第 3 章 计算机 I_O 栈概览.md
+        - SSD/ssd-articles/第 4 章 半导体存储器分类.md
+        - SSD/ssd-articles/第 5 章 NAND Flash 结构与原理.md
+        - SSD/ssd-articles/第 6 章 NAND 接口与 ONFI _ Toggle 协议.md
+        - SSD/ssd-articles/第 7 章 3D NAND 与现代闪存技术.md
+        - SSD/ssd-articles/第 8 章 SSD 整体架构.md
+        - SSD/ssd-articles/第 9 章 SSD 控制器（SoC）详解.md
+        - SSD/ssd-articles/第 10 章 SSD 固件的分层架构.md
+        - SSD/ssd-articles/第 11 章 板级硬件与信号完整性.md
+        - SSD/ssd-articles/第 12 章 FTL（Flash Translation Layer）基础.md
+        - SSD/ssd-articles/第 13 章 垃圾回收（Garbage Collection）.md
+        - SSD/ssd-articles/第 14 章 磨损均衡（Wear Leveling）.md
+        - SSD/ssd-articles/第 15 章 坏块管理与 ECC.md
   - 数据结构: 
     - DS_Algo/CS61B/CS61B.md
   - 算法: 
@@ -305,6 +322,7 @@ extra_javascript:
   - javascripts/config.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/mermaid@12/dist/mermaid.min.js
 extra_css:
   # [数学公式支持]
   # https://squidfunk.github.io/mkdocs-material/reference/math/#katex
